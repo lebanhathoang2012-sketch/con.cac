@@ -1,0 +1,193 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blox Fruits Scripts</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f8;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+.container {
+    width: 92%;
+    max-width: 950px;
+    margin: 35px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.code {
+    background: #171717;
+    color: #e8e8e8;
+    padding: 18px;
+    border-radius: 9px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.copy {
+    margin-top: 12px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.copy:hover {
+    background: #1d4ed8;
+}
+
+.status {
+    margin-left: 10px;
+    color: #16a34a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔥 Blox Fruits Scripts</h1>
+
+
+<!-- FARM CHEST -->
+
+<div class="card">
+
+<h2>Script Farm Chest Blox Fruits</h2>
+
+<div class="description">
+Roblox — Tự động farm chest và dừng khi nhận được Fist of Darkness hoặc God's Chalice.
+</div>
+
+<div class="code" id="code1">getgenv().Team = "Marines";
+loadstring(game:HttpGet("https://raw.githubusercontent.com/godhnam/Script-Free/refs/heads/main/FarmChest.Vip"))()</div>
+
+<button class="copy" onclick="copyCode('code1','status1')">
+Copy
+</button>
+
+<span class="status" id="status1"></span>
+
+</div>
+
+
+<!-- KAITUN CYBORG -->
+
+<div class="card">
+
+<h2>Script Kaitun Cyborg</h2>
+
+<div class="description">
+Tự động thực hiện các bước để lấy Cyborg.
+</div>
+
+<div class="code" id="code2">getgenv().Settings = {
+    ["Team"] = "Pirates",
+    ["Max Chests"] = 30,
+    ["Fragments"] = 2500
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/godhnam/Script-Free/refs/heads/main/KaitunCyborg.Vip"))()</div>
+
+<button class="copy" onclick="copyCode('code2','status2')">
+Copy
+</button>
+
+<span class="status" id="status2"></span>
+
+</div>
+
+
+<!-- FIND FRUITS -->
+
+<div class="card">
+
+<h2>Script Kaitun Find Fruits</h2>
+
+<div class="description">
+Tự động tìm và nhặt trái cây.
+</div>
+
+<div class="code" id="code3">repeat task.wait() until game:IsLoaded()
+
+getgenv().Settings = {
+    ["Team"] = "Pirates",
+    ["Webhook"] = ""
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/godhnam/Script-Free/refs/heads/main/FindFruit.Vip"))()</div>
+
+<button class="copy" onclick="copyCode('code3','status3')">
+Copy
+</button>
+
+<span class="status" id="status3"></span>
+
+</div>
+
+</div>
+
+
+<script>
+
+function copyCode(codeId, statusId) {
+
+    const code = document.getElementById(codeId).innerText;
+
+    navigator.clipboard.writeText(code).then(function() {
+
+        const status = document.getElementById(statusId);
+
+        status.innerText = "✓ Đã copy";
+
+        setTimeout(function() {
+            status.innerText = "";
+        }, 2000);
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
+```
